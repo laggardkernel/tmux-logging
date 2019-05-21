@@ -67,9 +67,12 @@ Keybindings could be customized with
 
 Besides, logging locations could be customized as well.
 
-    set -g @logging-path "~" # default $HOME
-    set -g @screen-capture-path "~"
-    set -g @save-complete-history-path "~"
+    set -g @logging-path "$HOME"
+    set -g @screen-capture-path "$HOME"
+    set -g @save-complete-history-path "$HOME"
+
+**NOTE**: `$HOME` but not tilde `~` is recommended because `~` may not be expanded correctly
+in the shell script once it's quoted as `"~"`.
 
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
