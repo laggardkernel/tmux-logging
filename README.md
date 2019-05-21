@@ -56,6 +56,24 @@ Key binding: `prefix + alt + c`
 
 This is just a convenience key binding.
 
+### Settings
+
+Keybindings could be customized with
+
+    set -g @logging-key "P" # Shift-p
+    set -g @screen-capture-key "M-p" # Alt-p
+    set -g @save-complete-history-key "M-P" # Alt-Shift-p
+    set -g @clear-history-key "M-c" # Alt-c
+
+Besides, logging locations could be customized as well.
+
+    set -g @logging-path "$HOME"
+    set -g @screen-capture-path "$HOME"
+    set -g @save-complete-history-path "$HOME"
+
+**NOTE**: `$HOME` but not tilde `~` is recommended because `~` may not be expanded correctly
+in the shell script once it's quoted as `"~"`.
+
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
@@ -85,7 +103,7 @@ You should now have all `tmux-logging` key bindings defined.
 
 ### Installing `ansifilter` (recommended for OSX users)
 
-If you're on OSX, it is recommeneded to install `ansifilter`:
+If you're on OSX, it is recommended to install `ansifilter`:
 `$ brew install ansifilter`
 
 [ansifilter](http://www.andre-simon.de/doku/ansifilter/en/ansifilter.php)
